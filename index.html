@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sliding</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!-- 	<div class="arrows">
+		<button onclick="PlusSLides(-1)" class="prev">
+		<img src="assets/icon/left.png" alt="left-arrow" id="prev">
+		</button>
+		<button onclick="PlusSLides(1)" class="next">
+		<img src="assets/icon/right.png" alt="right-arrow" id="next">
+		</button>
+	 </div> -->
+	<section id="pages">
+	 <!-- <div id="slider"> -->
+	 	<div class="slideShow-container">
+		  <div class="mySlides fade" id="block">
+		  	<div class="image">
+			<img src="assets/Blog-post/post-5.png" alt="traveling image">
+		</div>
+			<h3>London Fashion week's continued the evolution</h3>
+			<a href="#">Fashion</a>
+			<span>2 minutes</span>
+		</div>
+		<!-- <div class="block" id="block"> -->
+			<div class="mySlides fade" id="block">
+			<div class="image">
+			<img src="assets/Blog-post/post-1.jpg" alt="fast food image">
+		</div>
+			<h3>London Fashion week's continued the evolution</h3>
+			<a href="#">Fashion</a>
+			<span>2 minutes</span>
+		</div>		
+		  <!-- <div class="block" id="block"> -->
+		  	<div class="mySlides fade" id="block">
+		  	<div class="image">
+			<img src="assets/Blog-post/post-3.jpg" alt="group party">
+		</div>
+			<h3>London Fashion week's continued the evolution</h3>
+			<a href="#">Fashion</a>
+			<span>2 minutes</span>
+		  </div>	
+         <!-- <div class="block" id="block"> -->
+         	<div class="mySlides fade" id="block">
+          <div class="image">
+			<img src="assets/Blog-post/post-2.jpg" alt="business man image">
+		 </div>
+			<h3>London Fashion week's continued the evolution</h3>
+			<a href="#">Fashion</a>
+			<span>2 minutes</span>
+		</div>
+		<a class="prev" onclick="PlusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="PlusSlides(1)">&#10095;</a>
+	</div>
+	</section>
+
+</body>
+	<script type="text/javascript">
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+// prev/next controls.......
+
+		function PlusSlides(n){
+			showSlides(slideIndex += n)
+		}
+		function currentSlide(n){
+			showSlides(slideIndex = n)
+		}
+
+		function showSlides(n) {
+			let i;
+			let slides = document.getElementsByClassName('mySlides');
+			if (n > slides.length) {slideIndex = 1};
+			if (n < 1) {slideIndex = slides.length};
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slides[slideIndex-1].style.display = "block";
+		}
+	</script>
+</html>

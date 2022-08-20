@@ -1,0 +1,122 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+/* arrows section */
+ /*.arrows {
+	display: flex;
+    justify-content: center;
+}
+.arrows button {
+	border: none;
+    background-color: white;
+    margin: 5px 30px;
+    width: 30px;
+    z-index: 1;
+}
+.arrows button:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+	transition: .5s;
+}
+.arrows img {
+    max-width: 100%;
+    margin: 10px 30px;
+}*/
+
+/* slider of content block section */
+
+#pages {
+    background: blueviolet;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    /*position: relative;*/
+    /*top: -70px;*/
+    overflow: hidden;
+}
+.slideShow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*position: absolute;*/
+    position: relative;
+    margin: auto;
+    top: 130px;
+}
+.mySlides {
+    /*display: flex;*/
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    height: 420px;
+    text-align: center;
+    box-shadow: 1px 1px 5px #111;
+    margin: auto 50px;
+}
+.prev,.next {
+    cursor: pointer;
+    position: absolute;
+    top: -30%;
+    width: auto; 
+    font-size: 24px;
+    font-weight: bolder;
+    padding: 16px;
+    margin-top: 22px;
+    user-select: none;
+    /*color: white;*/
+    border-radius: 0 3px 3px 0;
+    transition: .4s;
+}
+.next {
+    right: 45%;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 45%;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, .8);
+}
+.mySlides img {
+	width: 350px;
+	max-width: 100%;
+    height: 220px;
+}
+.mySlides a {
+	display: block;
+    padding: 12px 30px;
+    color: black;
+    background-color: #92e0e0;
+    border-radius: 30px;
+    margin: 15px auto;
+}
+.mySlides h3 {
+	padding: 30px 5px 5px;
+    font-size: 21px;
+    font-weight: 100;
+}
+.mySlides span {
+	padding: 0 0 20px;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to{
+        opacity: 1;
+    }
+}
